@@ -1,0 +1,79 @@
+    .contacto-content {
+        background-color: rgb(157, 199, 212);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+
+        .titulos {
+            margin-top: 80px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+
+            .titulo-abajo {
+                color: rgb(1, 16, 17);
+            }
+        }
+
+        .formulario {
+            margin-top: 30px;
+            margin-left: 60px;
+            width: 60%;
+
+            label {
+                width: 30%;
+                margin: 10px;
+            }
+
+            input {
+                background: none;
+                width: 65%;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+            }
+
+            .campos-form {
+                .errors {
+                    color: rgb(233, 7, 7);
+                }
+            }
+
+            #boton-enviar {
+                
+                background-color: rgb(22, 11, 73);
+                color: white;
+                margin: 10px;
+                margin-left: 30%;
+                padding: 10px;
+                width: 150px;
+                border: none;
+                border-radius: 25px;
+                text-align: center;
+                font-size: 16px;
+                cursor: pointer;
+
+            
+            }
+        }
+    }
+
+    .fondo-derecha {
+        background-color: rgb(182, 190, 182);
+        width: 35%;
+
+        .img-contacto {
+            position: relative;
+            right: 150px;
+            top: 150px;
+            width: 450px;
+            height: 400px;
+        }
+
+    }
+
+    .campos-form {
+        color: #000;
+        font-weight: bold;
+        
+    }

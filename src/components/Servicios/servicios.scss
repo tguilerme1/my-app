@@ -1,0 +1,112 @@
+.section-content {
+  display: flex;
+  height: 640px;
+
+  .fondo-izquierda {
+    background-color: whitesmoke;
+    height: 640px;
+    width: 40%;
+  }
+
+  .imagen-derecha {
+    background: url("../../images/PET-PVC.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    height: 640px;
+  }
+
+  .accordion-bootstrap {
+    position: absolute;
+    left: 10%;
+    right: 50%;
+    margin-top: 100px;
+  }
+
+  .acordeon-body {
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .acordeon__item {
+    background-color: #f7f7f7;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .acordeon__item:last-child {
+    border-bottom: 0;
+  }
+
+  .acordeon__item:hover {
+    background-color: #eee;
+  }
+
+  .acordeon__title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+
+  .acordeon__content {
+    display: none;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .acordeon__content--visible {
+    display: block;
+  }
+}
+
+
+// Acordeon
+
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
+    
+    &__item {
+      position: relative;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 6px #ddd;
+      background: #f1f1f1;
+      cursor: pointer;
+      transition: all .3s;
+      
+      &:hover {
+        background: #e1e1e1;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 6px #999;
+      }
+      
+      &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding: 0.5em 1em;
+        background: #f1f1f1;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 6px #ddd;
+        transition: all .3s;
+        
+        &.show {
+          height: auto;
+        }
+      }
+    }
+    
+    &__title {
+      font-weight: bold;
+    }
+  }

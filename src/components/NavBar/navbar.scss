@@ -1,0 +1,86 @@
+.navbar {
+    background-color: rgb(28, 114, 148);
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+    padding: 0rem 3rem;
+    z-index: 1000;
+
+    .nav-logo {
+        width: 150px;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 15px;
+        color: white;
+    }
+
+    
+
+    .nav-items {
+        a {
+            margin: 15px;
+            color: white;
+            position: relative;
+        }
+    }
+
+    // En pantallas grandes no aparece el menu tipo hamburguesa
+    .nav-toggle {
+        display: none;
+    }
+}
+
+// En pantallas mas pequeñas cambiamos la disposicion del menu
+@media (max-width: 768px) {
+    .nav-items {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        background: rgb(12, 133, 170);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 450%;
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+    }
+
+    .nav-items.open {
+        transform: translateX(0)
+    }
+
+    .nav-toggle {
+        display: flex !important;
+        flex-direction: column;
+        margin: 15px;
+
+        span {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin-bottom: 5px;
+            border-radius: 2px;
+            transform-origin: 5px 0px;
+            transition: 0.2s linear;
+        }
+    }
+
+    // Cuando el menú esta abierto cambia la hamburguesa por una cruz
+    .nav-toggle.open {
+        span {
+            transform: rotate(45deg) translate(0px, 0px);
+        }
+
+        span:nth-child(2) {
+            display: none;
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg) translate(-5px, 1px);
+        }
+    }
+}
